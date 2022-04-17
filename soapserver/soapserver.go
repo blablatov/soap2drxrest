@@ -1,5 +1,5 @@
 // Модуль парсер SOAP-сервера, для работы с сервисом интеграции Directum RX, через вызов модуля POST-запроса
-package main
+package soapserver
 
 import (
 	"encoding/xml"
@@ -11,6 +11,10 @@ import (
 
 	"github.com/3ideas/soap"
 )
+
+type RunerServer interface {
+	RunServer()
+}
 
 // FooRequest a simple request
 type FooRequest struct {
